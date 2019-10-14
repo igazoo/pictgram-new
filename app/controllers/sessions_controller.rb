@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     flash.now[:danger]='ログインに失敗しました'
     render :new
   end
- end
+  end
  
  def destroy
    log_out
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
  private
   def log_in(user)
    session[:user_id]=user.id
- end
+  end
  
  def log_out
    session.delete(:user_id)
@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
 
  def email_params
     params.require(:session).permit(:email)
-  end
+ end
 
 def password_params
   params.require(:session).permit(:password)
