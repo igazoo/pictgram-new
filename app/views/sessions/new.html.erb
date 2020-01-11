@@ -1,7 +1,7 @@
-<div class="users-new-wrapper">
+<div class="session-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-offset-4 col-md-4 users-new-container">
+      <div class="col-md-offset-4 col-md-4 session-container">
         <h1 class="text-center text-white">Log in</h1>
         <%= form_for :session, url: login_path do |f| %>
           <div class="form-group">
@@ -14,6 +14,7 @@
           </div>
 
           <%= f.submit "ログイン", class: "btn-block btn-white" %>
+          <%= link_to '新規登録はこちら', login_path,class: 'text-white' %>
         <% end %>
       </div>
     </div>

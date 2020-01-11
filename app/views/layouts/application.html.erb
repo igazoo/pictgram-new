@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!-- inital scale -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
   </head>
 
   <body>
@@ -23,13 +26,17 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              
+              </li　class="list-img">
+              <%= link_to topics_path do %>
+                <%= image_tag "icons/list-icon.png" %>
+              <% end %>
+            <li>
                <%= link_to favorites_index_path do %>
                 <%= image_tag "icons/heart.png" %>
               <% end %>
             </li>
-            
             <li>
+              
               <%= link_to new_topic_path do %>
                 <%= image_tag "icons/camera.png" %>
               <% end %>
