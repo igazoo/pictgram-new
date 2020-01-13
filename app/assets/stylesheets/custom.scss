@@ -38,8 +38,11 @@ h1, h2 {
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
+  position: fixed;
+  z-index: 100;
+  top: 0;
   
-}
+ }
 
 .top-hero-container {
   padding-top: 220px;
